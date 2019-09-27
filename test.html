@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exorcise 4d af Michael</title>
+  <style></style>
+</head>
+<body>
+  <div id="idnames"></div>
+  <br>
+  <br>
+  <button onclick="myFilter('a')">All with 'a'</button>
+
+  <script>
+    var names = ["Lars", "Jan", "Peter", "Bo", "Frederik", "Michael"]
+    var a = "<nav>\r\n" + names.map(x => "<a href=\"\">" + x + "</a>").join("\r\n") + "\r\n</nav>";
+
+    var names = [{name:"Lars",phone:"1234567"}, {name: "Peter",phone: "675843"}, {name: "Jan", phone: "98547"},{name: "Bo", phone: "79345"}];
+    var b = "<table border=\"1\">\r\n" + names.map(r => "<tr>\r\n" + Object.values(r).map(c => "<td>"+c+"</td>").join(" ") + "</tr>").join("\r\n") + "\r\n</table>";
+
+    document.getElementById("idnames").innerHTML = a + "<br><br>" + b;
+
+    function myFilter(letter) {
+      
+      //var c = "<table border=\"1\">\r\n" + names.filter(x => x.includes("a")).map(r => "<tr>\r\n" + Object.values(r).map(c => "<td>"+c+"</td>").join(" ") + "</tr>").join("\r\n") + "\r\n</table>";
+      console.log( names );
+      document.getElementById("names").innerHTML = names.filter(x => x.includes("a"));
+    }
+
+  </script>
+</body>
+</html>
